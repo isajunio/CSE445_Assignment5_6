@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ad1d2f5c-4faf-46a1-8a45-c7a97df6d4d4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5001/FantasyLeagueService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FantasyLeagueService.xsd" MetadataType="Schema" ID="c6f64c6f-535d-4e67-8b15-8970c619559e" SourceId="1" SourceUrl="http://localhost:5001/FantasyLeagueService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FantasyLeagueService1.xsd" MetadataType="Schema" ID="c33a0805-77fb-463f-bb0c-56ef934a6b75" SourceId="1" SourceUrl="http://localhost:5001/FantasyLeagueService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FantasyLeagueService.wsdl" MetadataType="Wsdl" ID="9a86ed44-dd31-4651-8e4a-61fc2e58c4ea" SourceId="1" SourceUrl="http://localhost:5001/FantasyLeagueService.svc?wsdl" />
+    <MetadataFile FileName="FantasyLeagueService2.xsd" MetadataType="Schema" ID="1f4d4a12-1479-42c8-baf3-1bae70f73477" SourceId="1" SourceUrl="http://localhost:5001/FantasyLeagueService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FantasyLeagueService.disco" MetadataType="Disco" ID="eb0de8d1-9048-4e5f-a66f-33e790b2ed72" SourceId="1" SourceUrl="http://localhost:5001/FantasyLeagueService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

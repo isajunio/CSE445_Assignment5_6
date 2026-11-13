@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PitWallServices/PitWallServices.csproj" />
+  <Project Path="PitWallTryIt/PitWallTryIt.csproj">
+    <BuildDependency Project="PitWallServices/PitWallServices.csproj" />
+  </Project>
+</Solution>
