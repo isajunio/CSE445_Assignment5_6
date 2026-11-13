@@ -1,0 +1,9 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+packages/
+*.user
+*.suo
+*.slnLaunch.user
+.DS_Store
