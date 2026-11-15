@@ -217,7 +217,7 @@
     <WCFMetadataStorage Include="Connected Services\WeatherRef\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CSE445_A5&amp;A6\PitWallSecurity\PitWallSecurity\PitWallSecurity.csproj">
+    <ProjectReference Include="..\PitWallSecurity\PitWallSecurity.csproj">
       <Project>{88f632cf-b980-4bc4-a545-9a0d2b4326cf}</Project>
       <Name>PitWallSecurity</Name>
     </ProjectReference>
