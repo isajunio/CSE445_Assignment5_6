@@ -42,11 +42,13 @@ namespace PitWallTryIt
                 return;
             }
 
-            // TODO (Izzy): check the captcha method here
-            
+            // CAPTCHA: stop here if the typed text is wrong. The control shows its own
+            // error and loads a fresh image, because each CAPTCHA answer works only once.
+            if (!captcha.IsValid()) return;
 
             if (AccountStore.MemberExists(user))
             {
+                captcha.NewChallenge();   // the old CAPTCHA was already used, so load a new one
                 lblError.Text = "That username is taken. Try another.";
                 return;
             }

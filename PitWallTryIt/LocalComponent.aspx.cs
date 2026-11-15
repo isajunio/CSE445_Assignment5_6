@@ -31,7 +31,12 @@ namespace PitWallTryIt
 
 
         //=================== Section: TO-DO:Captcha check click handler (Izzy) ===============================
-
+        protected void btnCheckCaptcha_Click(object sender, EventArgs e)
+        {
+            lblCaptchaResult.Text = captchaTryIt.IsValid()
+                ? "Correct. The CAPTCHA was solved."
+                : "Incorrect. A new image was loaded.";
+        }
 
 
     }

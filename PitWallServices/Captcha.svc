@@ -1,0 +1,1 @@
+<%@ ServiceHost Language="C#" Debug="true" Service="PitWallServices.CaptchaService" CodeBehind="Captcha.svc.cs" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>
