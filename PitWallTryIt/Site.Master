@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="PitWallTryIt.Site" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pit Wall F1</title>
+    <link href="Content/site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- Nav bar: shared by every page (Ayomide Oshilaja) --%>
+        <header class="nav">
+            <a href="Default.aspx" class="brand"><span class="brand-mark">P</span> PIT WALL <span class="brand-f1">F1</span></a>
+
+            <nav class="nav-links">
+                <a href="Default.aspx">Home</a>
+                <a href="RaceWeekend.aspx">Race weekend</a>
+                <a href="LocalComponent.aspx">Local component</a>
+                <a href="Member.aspx">Call the podium</a>
+                <a href="Staff.aspx">Staff</a>
+            </nav>
+
+            <div class="nav-actions">
+                <%-- Shows the signed-in user name, hidden when logged out --%>
+                <asp:Label ID="lblUser" runat="server" CssClass="nav-user" />
+                <%-- Shows "Log in" or "Log out" automatically (Forms auth) --%>
+                <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Log in" LogoutText="Log out"
+                    LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" CssClass="btn btn-sm" />
+                <%-- Sign up button, only shown to visitors who are not logged in --%>
+                <asp:HyperLink ID="lnkJoin" runat="server" NavigateUrl="~/CreateAccount.aspx"
+                    CssClass="btn btn-yellow btn-sm" Text="Join the grid" />
+            </div>
+        </header>
+
+        <main class="page">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <%-- Footer: visitor counter comes from Global.asax (Application state) --%>
+        <footer class="footer" id="footer">
+            <span><strong>PIT WALL</strong> <span class="brand-f1">F1</span> · CSE 445 Group 63 · Fall 2026</span>
+            <span>Visitors since app start: <asp:Label ID="lblVisitors" runat="server" CssClass="visitor-count" /></span>
+            <span>Ayomide Oshilaja · Gabriela Martinez · Izzy Junio</span>
+        </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../../CSE445_A5&amp;A6/PitWallSecurity/PitWallSecurity/PitWallSecurity.csproj" Id="88f632cf-b980-4bc4-a545-9a0d2b4326cf" />
+  <Project Path="PitWallServices/PitWallServices.csproj" Id="722d5985-801c-493a-b40f-722840fb98f3" />
+  <Project Path="PitWallTryIt/PitWallTryIt.csproj" Id="76e513c9-f6a6-4178-8ebe-e057e1333666">
+    <BuildDependency Project="PitWallServices/PitWallServices.csproj" />
+  </Project>
+</Solution>
