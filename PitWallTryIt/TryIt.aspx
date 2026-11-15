@@ -35,6 +35,8 @@
         .step b { display: block; font-size: 13px; margin-bottom: 4px; }
         input[type=text] { border: 2px solid #223971; border-radius: 6px; padding: 7px; width: 110px; font-size: 14px; }
         input.small { width: 46px; }
+        select { border: 2px solid #223971; border-radius: 6px; padding: 6px; font-size: 14px; }
+
         input[type=submit] { background: #FFC906; color: #121F45; border: 0; border-radius: 20px; padding: 8px 16px; font-weight: bold; font-size: 14px; cursor: pointer; margin: 4px 4px 0 0; }
         input[type=submit]:hover { background: #CC1E4A; color: #fff; }
         .out { display: block; background: #121F45; color: #fff; border-radius: 6px; padding: 10px; font-size: 13px; line-height: 1.5; margin-top: 12px; min-height: 40px; }
@@ -134,7 +136,71 @@
                     My picks: string[] GetPlayerPicks(string username)
                 </div>
             </div>
-
+            <!-- my f1 preferences card cookie component made by Gabriela Martinez -->
+            <div class="card" id="prefs">
+                <h2>🏁 My F1 Preferences</h2>
+                <div class="body">
+                    <p>Saves your username, favorite driver and favorite team in a browser cookie for 7 days.</p>
+                    <div class="step">
+                        <b>Username</b>
+                        <asp:TextBox ID="txtPrefUser" runat="server" MaxLength="30" />
+                    </div>
+                    <div class="step">
+                        <b>Favorite driver</b>
+                        <asp:DropDownList ID="ddlDriver" runat="server">
+                            <asp:ListItem Text="-- choose a driver --" Value="" />
+                            <asp:ListItem>Max Verstappen</asp:ListItem>
+                            <asp:ListItem>Yuki Tsunoda</asp:ListItem>
+                            <asp:ListItem>Lando Norris</asp:ListItem>
+                            <asp:ListItem>Oscar Piastri</asp:ListItem>
+                            <asp:ListItem>Charles Leclerc</asp:ListItem>
+                            <asp:ListItem>Lewis Hamilton</asp:ListItem>
+                            <asp:ListItem>George Russell</asp:ListItem>
+                            <asp:ListItem>Kimi Antonelli</asp:ListItem>
+                            <asp:ListItem>Fernando Alonso</asp:ListItem>
+                            <asp:ListItem>Lance Stroll</asp:ListItem>
+                            <asp:ListItem>Pierre Gasly</asp:ListItem>
+                            <asp:ListItem>Franco Colapinto</asp:ListItem>
+                            <asp:ListItem>Alexander Albon</asp:ListItem>
+                            <asp:ListItem>Carlos Sainz</asp:ListItem>
+                            <asp:ListItem>Isack Hadjar</asp:ListItem>
+                            <asp:ListItem>Liam Lawson</asp:ListItem>
+                            <asp:ListItem>Nico Hulkenberg</asp:ListItem>
+                            <asp:ListItem>Gabriel Bortoleto</asp:ListItem>
+                            <asp:ListItem>Esteban Ocon</asp:ListItem>
+                            <asp:ListItem>Oliver Bearman</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="step">
+                        <b>Favorite team</b>
+                        <asp:DropDownList ID="ddlTeam" runat="server">
+                            <asp:ListItem Text="-- choose a team --" Value="" />
+                            <asp:ListItem>Red Bull Racing</asp:ListItem>
+                            <asp:ListItem>McLaren</asp:ListItem>
+                            <asp:ListItem>Ferrari</asp:ListItem>
+                            <asp:ListItem>Mercedes</asp:ListItem>
+                            <asp:ListItem>Aston Martin</asp:ListItem>
+                            <asp:ListItem>Alpine</asp:ListItem>
+                            <asp:ListItem>Williams</asp:ListItem>
+                            <asp:ListItem>Racing Bulls</asp:ListItem>
+                            <asp:ListItem>Kick Sauber</asp:ListItem>
+                            <asp:ListItem>Haas</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="step">
+                        <asp:Button ID="btnSavePrefs" runat="server" Text="Save preferences" OnClick="btnSavePrefs_Click" />
+                        <asp:Button ID="btnLoadPrefs" runat="server" Text="Load preferences" OnClick="btnLoadPrefs_Click" />
+                        <asp:Button ID="btnClearPrefs" runat="server" Text="Clear preferences" OnClick="btnClearPrefs_Click" />
+                    <asp:Label ID="lblPrefs" runat="server" CssClass="out" />
+                </div>
+                <div class="notes">
+                    Provider: Gabriela Martinez · Component type: Cookie (HttpCookie, C# code-behind)<br />
+                    Cookie: RWH_F1Prefs (expires 7 days after saving)<br />
+                    Save: void PreferencesCookie.Save(HttpResponse, string username, string driver, string team)<br />
+                    Load: F1Preferences PreferencesCookie.Load(HttpRequest)<br />
+                    Clear: void PreferencesCookie.Clear(HttpResponse)
+                </div>
+            </div>
         </div>
 
     </form>

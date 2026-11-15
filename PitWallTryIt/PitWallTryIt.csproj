@@ -101,6 +101,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PreferenceCookies.cs" />
     <Compile Include="Connected Services\FantasyRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,6 +122,9 @@
     </Compile>
     <Compile Include="TryIt.aspx.designer.cs">
       <DependentUpon>TryIt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TryItPreferences.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
