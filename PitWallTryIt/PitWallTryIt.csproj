@@ -100,7 +100,6 @@
     <Content Include="LocalComponent.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RaceWeekend.aspx" />
-    <Content Include="TryIt.aspx" />
     <Content Include="Web.config" />
     <None Include="Connected Services\WeatherRef\WeatherService2.xsd">
       <SubType>Designer</SubType>
@@ -178,13 +177,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TryIt.aspx.cs">
-      <DependentUpon>TryIt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TryIt.aspx.designer.cs">
-      <DependentUpon>TryIt.aspx</DependentUpon>
     </Compile>
     <Compile Include="TryItPreferences.cs">
       <SubType>ASPXCodeBehind</SubType>
