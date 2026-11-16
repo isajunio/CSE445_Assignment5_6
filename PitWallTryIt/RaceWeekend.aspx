@@ -101,5 +101,33 @@
         </div>
     </section>
 
+    <%-- ===== Pit strategy: Gabriela Martinez (PitStrategyService, REST) ===== --%>
+    <section id="pit-strategy">
+        <div class="card">
+            <span class="badge badge-service">REST service</span>
+            <h3 style="margin-top:10px;">Pit strategy By: Gabriela Martinez</h3>
+            <p class="muted">Estimates total race time: (average lap × laps) + (pit stops × time lost per stop). Example: 82.5 s laps, 58 laps, 2 stops, 22 s per stop.</p>
+            <div class="form-row">
+                <div>
+                    <label>Average lap (seconds)</label>
+                    <asp:TextBox ID="txtLapTime" runat="server" Text="82.5" />
+                </div>
+                <div>
+                    <label>Total laps</label>
+                    <asp:TextBox ID="txtLaps" runat="server" Text="58" />
+                </div>
+                <div>
+                    <label>Pit stops</label>
+                    <asp:TextBox ID="txtStops" runat="server" Text="2" />
+                </div>
+                <div>
+                    <label>Loss per stop (seconds)</label>
+                    <asp:TextBox ID="txtPitLoss" runat="server" Text="22" />
+                </div>
+                <asp:Button ID="btnEstimate" runat="server" Text="Estimate race time" OnClick="btnEstimate_Click" CssClass="btn btn-yellow" />
+            </div>
+            <div class="output"><asp:Label ID="lblEstimate" runat="server" /></div>
+        </div>
+    </section>
  
 </asp:Content>

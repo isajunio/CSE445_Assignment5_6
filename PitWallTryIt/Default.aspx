@@ -180,13 +180,13 @@
                     <td>[Description]</td>
                     <td><a class="link-arrow" href="CreateAccount.aspx">TryIt</a></td>
                 </tr>
-                <tr>
-                    <td class="num">12</td><td><strong>[Service name]</strong></td><td>Gabriela Martinez</td>
-                    <%-- TODO (Gaby): fill in your service name, type, operation, parameters, return type, description and TryIt page --%>
-                    <td><span class="badge badge-service">[WSDL / REST]</span></td><td>[Operation]</td>
-                    <td><span class="chip">[type name]</span></td><td><span class="chip">[type]</span></td>
-                    <td>[Description]</td>
-                    <td><a class="link-arrow" href="#">TryIt</a></td>
+                 <tr>
+                    <td class="num">12</td><td><strong>Pit strategy</strong></td><td>Gabriela Martinez</td>
+                    <td><span class="badge badge-service">REST service</span></td><td>EstimateRaceTime</td>
+                    <td><span class="chip">double averageLapSeconds</span><span class="chip">int totalLaps</span><span class="chip">int plannedPitStops</span><span class="chip">double pitStopLossSeconds</span></td>
+                    <td><span class="chip">double</span></td>
+                    <td>Estimates total race time in seconds: (average lap × laps) + (pit stops × time lost per stop). Rejects unrealistic inputs with HTTP 400.</td>
+                    <td><a class="link-arrow" href="RaceWeekend.aspx#pit-strategy">TryIt</a></td>
                 </tr>
             </table>
             <div class="table-foot">

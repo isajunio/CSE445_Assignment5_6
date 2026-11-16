@@ -108,6 +108,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RaceWeekendPitStrategy.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Connected Services\FantasyRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

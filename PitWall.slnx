@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="PitStrategyServices/PitStrategyServices.csproj" Id="96d303da-f018-42fa-8a2d-33e04bac9fe9" />
   <Project Path="PitWallSecurity/PitWallSecurity.csproj" Id="88f632cf-b980-4bc4-a545-9a0d2b4326cf" />
   <Project Path="PitWallServices/PitWallServices.csproj" Id="722d5985-801c-493a-b40f-722840fb98f3" />
   <Project Path="PitWallTryIt/PitWallTryIt.csproj" Id="76e513c9-f6a6-4178-8ebe-e057e1333666">
