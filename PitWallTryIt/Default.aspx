@@ -39,7 +39,7 @@
                 <span class="card-num">03</span>
                 <div class="card-icon">3</div>
                 <h3>Local Component</h3>
-                <p class="muted">Test every local component the team built: encryption, cookies, captcha and app state.</p>
+                <p class="muted">Test every local component the team built: encryption, cookies, captcha, session state and app state.</p>
                 <a class="link-arrow" href="LocalComponent.aspx">Try the components</a>
             </div>
         </div>
@@ -115,17 +115,17 @@
                     <td><a class="link-arrow" href="LocalComponent.aspx#decrypt">TryIt</a></td>
                 </tr>
                 <tr>
-                    <td class="num">03</td><td><strong>Cookie profile</strong></td><td>Gabriela Martinez</td>
-                    <td><span class="badge">Cookie</span></td><td>SaveFavorites</td>
-                    <td><span class="chip">string driver</span><span class="chip">string team</span></td><td><span class="chip">void</span></td>
-                    <td>Remembers a favorite driver and team for 7 days.</td>
+                    <td class="num">03</td><td><strong>F1 preferences cookie</strong></td><td>Gabriela Martinez</td>
+                    <td><span class="badge">Cookie</span></td><td>PreferencesCookie.Save, Load, Clear</td>
+                    <td><span class="chip">string username</span><span class="chip">string driver</span><span class="chip">string team</span></td><td><span class="chip">void</span><span class="chip">F1Preferences</span></td>
+                    <td>Remembers a username, favorite driver and favorite team in a 7-day cookie.</td>
                     <td><a class="link-arrow" href="LocalComponent.aspx#cookies">TryIt</a></td>
                 </tr>
                 <tr>
                     <td class="num">04</td><td><strong>Captcha</strong></td><td>Izzy Junio</td>
-                    <td><span class="badge">User control</span></td><td>Verify</td>
-                    <td><span class="chip">string answer</span></td><td><span class="chip">bool</span></td>
-                    <td>Image verifier used on sign up.</td>
+                    <td><span class="badge">User control</span></td><td>IsValid, NewChallenge</td>
+                    <td><span class="chip">typed text (TextBox)</span></td><td><span class="chip">bool</span><span class="chip">void</span></td>
+                    <td>CaptchaControl.ascx: shows a CAPTCHA image and checks the typed answer. Used on sign up.</td>
                     <td><a class="link-arrow" href="LocalComponent.aspx#captcha">TryIt</a></td>
                 </tr>
                 <tr>
@@ -137,9 +137,9 @@
                 </tr>
                 <tr>
                     <td class="num">06</td><td><strong>Visitor counter</strong></td><td>Izzy Junio</td>
-                    <td><span class="badge">Global.asax</span></td><td>Session_Start, Session_End</td>
+                    <td><span class="badge">Global.asax</span></td><td>Session_Start</td>
                     <td><span class="chip">none</span></td><td><span class="chip">int (app state)</span></td>
-                    <td>Counts visitors since the app started. Shown in the footer of every page.</td>
+                    <td>Adds 1 for each new visitor since the app started. Shown in the footer of every page.</td>
                     <td><a class="link-arrow" href="#footer">Footer</a></td>
                 </tr>
                 <tr>
@@ -172,9 +172,15 @@
                     <td>Podium picks, race scoring and league rankings.</td>
                     <td><a class="link-arrow" href="RaceWeekend.aspx#fantasy">TryIt</a></td>
                 </tr>
-               
-                 <tr>
-                    <td class="num">11</td><td><strong>Session state</strong></td><td>Ayomide Oshilaja</td>
+                <tr>
+                    <td class="num">11</td><td><strong>Captcha service</strong></td><td>Izzy Junio</td>
+                    <td><span class="badge badge-service">REST service</span></td><td>GetVerifierString, GetImage</td>
+                    <td><span class="chip">string length</span><span class="chip">string str</span></td><td><span class="chip">string</span><span class="chip">Stream (image)</span></td>
+                    <td>Random verifier text and its CAPTCHA image (ASU image verifier). Used by the Captcha control.</td>
+                    <td><a class="link-arrow" href="LocalComponent.aspx#captcha">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td class="num">12</td><td><strong>Session state</strong></td><td>Ayomide Oshilaja</td>
                     <td><span class="badge">Session state</span></td><td>Session["TrackZip"]</td>
                     <td><span class="chip">string zipcode</span></td><td><span class="chip">string</span></td>
                     <td>Remembers a favorite track zip for the visit and auto-fills Track weather on Race weekend.</td>

@@ -27,14 +27,20 @@
         </div>
     </section>
 
-    <%-- ===== Decrypt: Gabriela Martinez ===== --%>
-    <section id="decrypt">
+    <%-- ===== Decrypt: Gabriela Martinez (PitWallSecurity.dll) ===== --%>
+    <section class="section" id="decrypt">
         <div class="card">
-            <%-- TODO (Gaby): Decrypt TryIt. Copy the Encrypt card above and use:
-                 TextBox txtCipher, Button btnDecrypt (OnClick="btnDecrypt_Click"), Label lblPlain. --%>
             <span class="badge">DLL</span>
             <h3 style="margin-top:10px;">Decrypt By: Gabriela Martinez</h3>
-            <p class="muted">Coming soon. Paste the Encrypt output above to get the original text back.</p>
+            <p class="muted">PitWallSecurity.dll. Input: Base64 ciphertext string. Output: the original plain text. Run Encrypt above with "Hello F1", then paste the result here.</p>
+            <div class="form-row">
+                <div>
+                    <label>Ciphertext (Base64)</label>
+                    <asp:TextBox ID="txtCipher" runat="server" placeholder="Paste the Encrypt output" />
+                </div>
+                <asp:Button ID="btnDecrypt" runat="server" Text="Run Decrypt" OnClick="btnDecrypt_Click" CssClass="btn btn-yellow" />
+            </div>
+            <div class="output"><asp:Label ID="lblPlain" runat="server" /></div>
         </div>
     </section>
 
