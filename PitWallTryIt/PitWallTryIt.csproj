@@ -156,6 +156,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PreferenceCookies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RaceWeekend.aspx.cs">
       <DependentUpon>RaceWeekend.aspx</DependentUpon>

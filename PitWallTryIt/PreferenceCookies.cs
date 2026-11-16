@@ -9,7 +9,7 @@ namespace PitWallTryIt
     {
         public const string CookieName = "RWH_F1Prefs";
 
-        public const int ExpiryDays = 7;
+        public const int ExpiryDays = 7; 
 
 
         public static void Save(HttpResponse response, string username, string driver, string team)

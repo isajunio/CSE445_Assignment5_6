@@ -44,12 +44,64 @@
     </section>
 
     <%-- ===== Cookies: Gabriela Martinez ===== --%>
-    <section id="cookies">
+        <section id="cookies">
         <div class="card">
-            <%-- TODO (Gaby): Cookies TryIt. Save + read username, favorite driver, favorite team (7-day expiry). --%>
             <span class="badge">Cookie</span>
             <h3 style="margin-top:10px;">Cookies By: Gabriela Martinez</h3>
-            <p class="muted">Coming soon.</p>
+            <p class="muted">Saves a username, favorite driver and favorite team in one HttpCookie (RWH_F1Prefs) that lasts 7 days. Save, then Load to bring them back, even after closing the browser. No passwords are stored.</p>
+            <div class="form-row">
+                <div>
+                    <label>Username</label>
+                    <asp:TextBox ID="txtPrefUser" runat="server" MaxLength="30" placeholder="e.g. gaby" />
+                </B>
+                    <label>Favorite driver</label>
+                    <asp:DropDownList ID="ddlDriver" runat="server">
+                        <asp:ListItem Text="-- choose a driver --" Value="" />
+                        <asp:ListItem>Max Verstappen</asp:ListItem>
+                        <asp:ListItem>Yuki Tsunoda</asp:ListItem>
+                        <asp:ListItem>Lando Norris</asp:ListItem>
+                        <asp:ListItem>Oscar Piastri</asp:ListItem>
+                        <asp:ListItem>Charles Leclerc</asp:ListItem>
+                        <asp:ListItem>Lewis Hamilton</asp:ListItem>
+                        <asp:ListItem>George Russell</asp:ListItem>
+                        <asp:ListItem>Kimi Antonelli</asp:ListItem>
+                        <asp:ListItem>Fernando Alonso</asp:ListItem>
+                        <asp:ListItem>Lance Stroll</asp:ListItem>
+                        <asp:ListItem>Pierre Gasly</asp:ListItem>
+                        <asp:ListItem>Franco Colapinto</asp:ListItem>
+                        <asp:ListItem>Alexander Albon</asp:ListItem>
+                        <asp:ListItem>Carlos Sainz</asp:ListItem>
+                        <asp:ListItem>Isack Hadjar</asp:ListItem>
+                        <asp:ListItem>Liam Lawson</asp:ListItem>
+                        <asp:ListItem>Nico Hulkenberg</asp:ListItem>
+                        <asp:ListItem>Gabriel Bortoleto</asp:ListItem>
+                        <asp:ListItem>Esteban Ocon</asp:ListItem>
+                        <asp:ListItem>Oliver Bearman</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div>
+                    <label>Favorite team</label>
+                    <asp:DropDownList ID="ddlTeam" runat="server">
+                        <asp:ListItem Text="-- choose a team --" Value="" />
+                        <asp:ListItem>Red Bull Racing</asp:ListItem>
+                        <asp:ListItem>McLaren</asp:ListItem>
+                        <asp:ListItem>Ferrari</asp:ListItem>
+                        <asp:ListItem>Mercedes</asp:ListItem>
+                        <asp:ListItem>Aston Martin</asp:ListItem>
+                        <asp:ListItem>Alpine</asp:ListItem>
+                        <asp:ListItem>Williams</asp:ListItem>
+                        <asp:ListItem>Racing Bulls</asp:ListItem>
+                        <asp:ListItem>Kick Sauber</asp:ListItem>
+                        <asp:ListItem>Haas</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+            </div>
+            <div class="form-row">
+                <asp:Button ID="btnSavePrefs" runat="server" Text="Save preferences" OnClick="btnSavePrefs_Click" CssClass="btn btn-yellow" />
+                <asp:Button ID="btnLoadPrefs" runat="server" Text="Load preferences" OnClick="btnLoadPrefs_Click" CssClass="btn" />
+                <asp:Button ID="btnClearPrefs" runat="server" Text="Clear preferences" OnClick="btnClearPrefs_Click" CssClass="btn" />
+            </div>
+            <div class="output"><asp:Label ID="lblPrefs" runat="server" /></div>
         </div>
     </section>
 
