@@ -114,11 +114,12 @@
                     <td>Restores text encrypted by Encrypt, using the same key.</td>
                     <td><a class="link-arrow" href="LocalComponent.aspx#decrypt">TryIt</a></td>
                 </tr>
-                <tr>
+                 <tr>
                     <td class="num">03</td><td><strong>Cookie profile</strong></td><td>Gabriela Martinez</td>
-                    <td><span class="badge">Cookie</span></td><td>SaveFavorites</td>
-                    <td><span class="chip">string driver</span><span class="chip">string team</span></td><td><span class="chip">void</span></td>
-                    <td>Remembers a favorite driver and team for 7 days.</td>
+                    <td><span class="badge">Cookie</span></td><td>Save, Load, Clear</td>
+                    <td><span class="chip">string username</span><span class="chip">string driver</span><span class="chip">string team</span></td>
+                    <td><span class="chip">void</span><span class="chip">F1Preferences</span></td>
+                    <td>Stores username, favorite driver and favorite team in one HttpCookie (RWH_F1Prefs) for 7 days. No passwords.</td>
                     <td><a class="link-arrow" href="LocalComponent.aspx#cookies">TryIt</a></td>
                 </tr>
                 <tr>
