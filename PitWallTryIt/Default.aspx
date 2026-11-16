@@ -172,21 +172,13 @@
                     <td>Podium picks, race scoring and league rankings.</td>
                     <td><a class="link-arrow" href="RaceWeekend.aspx#fantasy">TryIt</a></td>
                 </tr>
-                <tr>
-                    <td class="num">11</td><td><strong>Captcha service</strong></td><td>Izzy Junio</td>
-                    <%-- TODO (Izzy): fill in your service type, operation, parameters, return type and description --%>
-                    <td><span class="badge badge-service">[WSDL / REST]</span></td><td>[Operation]</td>
-                    <td><span class="chip">[type name]</span></td><td><span class="chip">[type]</span></td>
-                    <td>[Description]</td>
-                    <td><a class="link-arrow" href="CreateAccount.aspx">TryIt</a></td>
-                </tr>
-                <tr>
-                    <td class="num">12</td><td><strong>[Service name]</strong></td><td>Gabriela Martinez</td>
-                    <%-- TODO (Gaby): fill in your service name, type, operation, parameters, return type, description and TryIt page --%>
-                    <td><span class="badge badge-service">[WSDL / REST]</span></td><td>[Operation]</td>
-                    <td><span class="chip">[type name]</span></td><td><span class="chip">[type]</span></td>
-                    <td>[Description]</td>
-                    <td><a class="link-arrow" href="#">TryIt</a></td>
+               
+                 <tr>
+                    <td class="num">11</td><td><strong>Session state</strong></td><td>Ayomide Oshilaja</td>
+                    <td><span class="badge">Session state</span></td><td>Session["TrackZip"]</td>
+                    <td><span class="chip">string zipcode</span></td><td><span class="chip">string</span></td>
+                    <td>Remembers a favorite track zip for the visit and auto-fills Track weather on Race weekend.</td>
+                    <td><a class="link-arrow" href="LocalComponent.aspx#session">TryIt</a></td>
                 </tr>
             </table>
             <div class="table-foot">

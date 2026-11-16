@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PitWallServices\\PitWallServices.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "PitWallTryIt\\PitWallTryIt.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

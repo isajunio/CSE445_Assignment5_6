@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Local component | Pit Wall" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LocalComponent.aspx.cs" Inherits="PitWallTryIt.LocalComponent" %>
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
-    <%-- TryIt page for every local component --%>
+    <%-- TryIt page links for every local component --%>
 
     <section class="hero">
         <div class="eyebrow yellow">Local component</div>
@@ -37,13 +37,67 @@
         </div>
     </section>
 
-    <%-- ===== Cookies: Gabriela Martinez ===== --%>
+        <%-- ===== Cookies: Gabriela Martinez ===== --%>
     <section id="cookies">
         <div class="card">
-            <%-- TODO (Gaby): Cookies TryIt. Save + read username, favorite driver, favorite team (7-day expiry). --%>
             <span class="badge">Cookie</span>
-            <h3 style="margin-top:10px;">Cookies By: Gabriela Martinez</h3>
-            <p class="muted">Coming soon.</p>
+            <h3 style="margin-top:10px;">My F1 Preferences By: Gabriela Martinez</h3>
+            <p class="muted">Saves your username, favorite driver and favorite team in a browser cookie (RWH_F1Prefs) for 7 days.</p>
+
+            <label>Username</label>
+            <asp:TextBox ID="txtPrefUser" runat="server" MaxLength="30" />
+
+            <div class="form-row">
+                <div>
+                    <label>Favorite driver</label>
+                    <asp:DropDownList ID="ddlDriver" runat="server">
+                        <asp:ListItem Text="-- choose a driver --" Value="" />
+                        <asp:ListItem>Max Verstappen</asp:ListItem>
+                        <asp:ListItem>Yuki Tsunoda</asp:ListItem>
+                        <asp:ListItem>Lando Norris</asp:ListItem>
+                        <asp:ListItem>Oscar Piastri</asp:ListItem>
+                        <asp:ListItem>Charles Leclerc</asp:ListItem>
+                        <asp:ListItem>Lewis Hamilton</asp:ListItem>
+                        <asp:ListItem>George Russell</asp:ListItem>
+                        <asp:ListItem>Kimi Antonelli</asp:ListItem>
+                        <asp:ListItem>Fernando Alonso</asp:ListItem>
+                        <asp:ListItem>Lance Stroll</asp:ListItem>
+                        <asp:ListItem>Pierre Gasly</asp:ListItem>
+                        <asp:ListItem>Franco Colapinto</asp:ListItem>
+                        <asp:ListItem>Alexander Albon</asp:ListItem>
+                        <asp:ListItem>Carlos Sainz</asp:ListItem>
+                        <asp:ListItem>Isack Hadjar</asp:ListItem>
+                        <asp:ListItem>Liam Lawson</asp:ListItem>
+                        <asp:ListItem>Nico Hulkenberg</asp:ListItem>
+                        <asp:ListItem>Gabriel Bortoleto</asp:ListItem>
+                        <asp:ListItem>Esteban Ocon</asp:ListItem>
+                        <asp:ListItem>Oliver Bearman</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div>
+                    <label>Favorite team</label>
+                    <asp:DropDownList ID="ddlTeam" runat="server">
+                        <asp:ListItem Text="-- choose a team --" Value="" />
+                        <asp:ListItem>Red Bull Racing</asp:ListItem>
+                        <asp:ListItem>McLaren</asp:ListItem>
+                        <asp:ListItem>Ferrari</asp:ListItem>
+                        <asp:ListItem>Mercedes</asp:ListItem>
+                        <asp:ListItem>Aston Martin</asp:ListItem>
+                        <asp:ListItem>Alpine</asp:ListItem>
+                        <asp:ListItem>Williams</asp:ListItem>
+                        <asp:ListItem>Racing Bulls</asp:ListItem>
+                        <asp:ListItem>Kick Sauber</asp:ListItem>
+                        <asp:ListItem>Haas</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+            </div>
+
+            <div class="hero-actions" style="margin-top:0;">
+                <asp:Button ID="btnSavePrefs" runat="server" Text="Save preferences" OnClick="btnSavePrefs_Click" CssClass="btn btn-yellow" />
+                <asp:Button ID="btnLoadPrefs" runat="server" Text="Load preferences" OnClick="btnLoadPrefs_Click" CssClass="btn btn-yellow" />
+                <asp:Button ID="btnClearPrefs" runat="server" Text="Clear preferences" OnClick="btnClearPrefs_Click" CssClass="btn" />
+            </div>
+            <div class="output"><asp:Label ID="lblPrefs" runat="server" /></div>
         </div>
     </section>
 
@@ -56,6 +110,27 @@
             <p class="muted">Coming soon.</p>
         </div>
     </section>
+
+
+        <%-- ===== Session state: Ayomide Oshilaja ===== --%>
+    <section id="session">
+        <div class="card">
+            <span class="badge">Session state</span>
+            <h3 style="margin-top:10px;">Session state By: Ayomide Oshilaja</h3>
+            <p class="muted">Remembers your favorite track zip code for this visit only (until you close the browser or after 20 minutes with no activity). The Track weather box on Race weekend fills it in for you. Try 33054 (Miami).</p>
+            <div class="form-row">
+                <div>
+                    <label>Favorite track zip</label>
+                    <asp:TextBox ID="txtSessionZip" runat="server" placeholder="e.g. 33054" />
+                </div>
+                <asp:Button ID="btnSaveSession" runat="server" Text="Save to session" OnClick="btnSaveSession_Click" CssClass="btn btn-yellow" />
+                <asp:Button ID="btnShowSession" runat="server" Text="Show session" OnClick="btnShowSession_Click" CssClass="btn btn-yellow" />
+                <asp:Button ID="btnClearSession" runat="server" Text="Clear session" OnClick="btnClearSession_Click" CssClass="btn" />
+            </div>
+            <div class="output"><asp:Label ID="lblSession" runat="server" /></div>
+        </div>
+    </section>
+
 
     <%-- ===== Global.asax: Ayomide Oshilaja ===== --%>
     <section id="appstate">

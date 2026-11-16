@@ -24,6 +24,13 @@ namespace PitWallTryIt
         protected void Page_Load(object sender, EventArgs e)
         {
             ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
+
+            // Session state (Ayomide): fill in the favorite track zip saved during this visit
+            string savedZip = Session["TrackZip"] as string;
+            if (!IsPostBack && !string.IsNullOrEmpty(savedZip))
+            {
+                txtZip.Text = savedZip;
+            }
         }
 
         //---------------- weather ----------------
@@ -36,6 +43,7 @@ namespace PitWallTryIt
                 using (var client = new WeatherRef.WeatherServiceClient())
                 {
                     lblWeather.Text = Lines(client.Weather5day(txtZip.Text));
+                    Session["TrackZip"] = txtZip.Text.Trim(); // remembers the zip for the visit
                 }
             }
             catch (Exception ex)
