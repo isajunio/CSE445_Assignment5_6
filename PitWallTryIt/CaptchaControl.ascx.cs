@@ -57,6 +57,7 @@ namespace PitWallTryIt
         // True only if the typed text matches. Each answer works once.
         public bool IsValid()
         {
+            lblCaptchaError.Text = "";            // drop any message left over from a previous attempt
             string expected = Session[SessionKey] as string;
             Session.Remove(SessionKey);
             bool ok = expected != null &&

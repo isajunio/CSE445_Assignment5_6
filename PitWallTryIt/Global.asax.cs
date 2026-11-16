@@ -100,7 +100,7 @@ namespace PitWallTryIt
             Application.Lock();
             try
             {
-                Application["VisitorCount"] = (int)(Application["VisitorCount"] ?? 0) + 1;
+                Application["Visitors"] = (int)(Application["Visitors"] ?? 0) + 1;
             }
             finally
             {
