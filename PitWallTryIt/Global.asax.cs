@@ -89,8 +89,24 @@ namespace PitWallTryIt
         }
 
 
-        // ================= Section: Izzy (full name ) =====================
+        // ================= Section: Izzy Junio =====================
         //Session_Start
+        // Runs once for each new visitor session: add 1 to the counter.
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            Session["Started"] = DateTime.UtcNow;
+
+            // Lock so two visitors arriving together don't overwrite each other's update.
+            Application.Lock();
+            try
+            {
+                Application["Visitors"] = (int)(Application["Visitors"] ?? 0) + 1;
+            }
+            finally
+            {
+                Application.UnLock();
+            }
+        }
         //Session_End
 
 
