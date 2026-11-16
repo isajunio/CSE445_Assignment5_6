@@ -36,8 +36,30 @@ namespace PitWallSecurity
             }
         }
 
-        //==================== Section: Gaby (to be filled for Decrypt) ================================
+        //==================== Section:Decrypt by Gabriela Martinez ================================
+        /// Input: Base64 ciphertext string
+        /// Output: original plain text string.
+        public static string Decrypt(string cipherText)
+        {
+            if (cipherText == null) throw new ArgumentNullException(nameof(cipherText));
 
+            byte[] input = Convert.FromBase64String(cipherText.Trim());
+
+            using (Aes aes = Aes.Create())
+            {
+           
+                aes.Key = CryptoKeys.Key;
+                aes.IV = CryptoKeys.IV;
+                aes.Mode = CipherMode.CBC;
+                aes.Padding = PaddingMode.PKCS7;
+
+                using (ICryptoTransform decryptor = aes.CreateDecryptor())
+                { 
+                    byte[] output = decryptor.TransformFinalBlock(input, 0, input.Length);
+                    return Encoding.UTF8.GetString(output);
+                }
+            }
+        }
 
     }
 }
