@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Local component | Pit Wall" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LocalComponent.aspx.cs" Inherits="PitWallTryIt.LocalComponent" %>
+<%@ Register Src="~/CaptchaControl.ascx" TagPrefix="uc" TagName="Captcha" %>
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <%-- TryIt page links for every local component --%>
@@ -103,12 +104,20 @@
 
     <%-- ===== Captcha: Izzy Junio ===== --%>
     <section id="captcha">
-        <div class="card">
-            <%-- TODO (Izzy): Captcha user control TryIt. Register Captcha.ascx at the top of this page, then place the control here. --%>
-            <span class="badge">User control</span>
-            <h3 style="margin-top:10px;">Captcha By: Izzy Junio</h3>
-            <p class="muted">Coming soon.</p>
+    <div class="card">
+        <span class="badge">User control</span>
+        <h3 style="margin-top:10px;">Captcha By: Izzy Junio</h3>
+        <p class="muted">
+            CaptchaControl.ascx. Calls the Captcha WCF service (GetVerifierString and GetImage) from the
+            server, keeps the answer in Session, and checks what you type. Input: the characters you read.
+            Output: Correct or Incorrect. Use "New image" for another one.
+        </p>
+        <uc:Captcha ID="captchaTryIt" runat="server" />
+        <div class="form-row">
+            <asp:Button ID="btnCheckCaptcha" runat="server" Text="Check CAPTCHA" OnClick="btnCheckCaptcha_Click" CssClass="btn btn-yellow" />
         </div>
+        <div class="output"><asp:Label ID="lblCaptchaResult" runat="server" /></div>
+    </div>
     </section>
 
 

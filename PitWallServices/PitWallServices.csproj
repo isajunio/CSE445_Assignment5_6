@@ -61,16 +61,21 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Captcha.svc" />
     <Content Include="FantasyLeagueService.svc" />
     <Content Include="RaceDataService.svc" />
     <Content Include="WeatherService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Captcha.svc.cs">
+      <DependentUpon>Captcha.svc</DependentUpon>
+    </Compile>
     <Compile Include="FantasyLeagueService.svc.cs">
       <DependentUpon>FantasyLeagueService.svc</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ApiHelper.cs" />
+    <Compile Include="ICaptchaService.cs" />
     <Compile Include="IFantasyLeagueService.cs" />
     <Compile Include="IRaceDataService.cs" />
     <Compile Include="IWeatherService.cs" />

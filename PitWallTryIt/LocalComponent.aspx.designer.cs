@@ -105,6 +105,33 @@ namespace PitWallTryIt
         protected global::System.Web.UI.WebControls.Label lblPrefs;
 
         /// <summary>
+        /// captchaTryIt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::PitWallTryIt.CaptchaControl captchaTryIt;
+
+        /// <summary>
+        /// btnCheckCaptcha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCheckCaptcha;
+
+        /// <summary>
+        /// lblCaptchaResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCaptchaResult;
+
+        /// <summary>
         /// txtSessionZip control.
         /// </summary>
         /// <remarks>
