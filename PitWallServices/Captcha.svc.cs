@@ -11,6 +11,7 @@ namespace PitWallServices
         private const string AsuBase =
             "https://venus.sod.asu.edu/WSRepository/Services/ImageVerifier/Service.svc/";
 
+        // Returns a random string of the given length from the ASU image verifier service
         public string GetVerifierString(string length)
         {
             int n;
@@ -37,6 +38,8 @@ namespace PitWallServices
                 raw = XDocument.Parse(raw).Root.Value;
             return raw.Trim('"');                    // JSON-style quotes
         }
+
+        // Returns the CAPTCHA image for the given string from the ASU image verifier service
 
         public Stream GetImage(string str)
         {
